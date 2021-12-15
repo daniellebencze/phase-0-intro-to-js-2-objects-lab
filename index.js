@@ -1,45 +1,75 @@
 // Write your solution in this file!
+// const employee = {
+//     name: "Danielle",
+//     streetAddress: "123 Happy Street" 
+// }
+
+
+// function updateEmployeeWithKeyAndValue(employee, name, streetAddress) {
+//     return {
+//         ...employee,
+//         name: "Sam",
+//         streetAddress: "11 Broadway"
+//     };
+// }
+
+// const newEmployee = updateEmployeeWithKeyAndValue(
+//     newEmployee,
+//     "Sam",
+//     "11 Broadway"
+// );
+
+
+// employee;
+
+// newEmployee;
+
+// function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+//     employee.name = "Sam";
+//     employee.streetAddress = "12 Broadway";
+//     return employee;
+// }
+
+// function deleteFromEmployeeByKey(employee, name, value) {
+//     const deletedFromEmployeeClone = {...employee};
+//     delete deletedFromEmployeeClone.name;
+//     delete deletedFromEmployeeClone.streetAddress;
+//     return deletedFromEmployeeClone;
+// }
+
+// function destructivelyDeleteFromEmployeeByKey(employee, key) {
+//         delete employee.name;
+//         delete employee.streetAddress;
+//         return employee;
+// }
+
+
 const employee = {
     name: "Danielle",
-    streetAddress: "123 Happy Street" 
+    streetAddress: "123 Happy St",
 }
 
-
-function updateEmployeeWithKeyAndValue(employee, name, streetAddress) {
+function updateEmployeeWithKeyAndValue (object, key, value) {
     return {
         ...employee,
         name: "Sam",
-        streetAddress: "11 Broadway"
-    };
-}
-
-const newEmployee = updateEmployeeWithKeyAndValue(
-    newEmployee,
-    "Sam",
-    "11 Broadway"
-);
-
-
-employee;
-
-newEmployee;
+        streetAddress: "11 Broadway",
+    }}
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-    employee.name = "Sam";
-    employee.streetAddress = "12 Broadway";
-    return employee;
-}
+     employee.name = "Sam";
+     employee.streetAddress = "12 Broadway";
+     return employee;
+ }
 
-function deleteFromEmployeeByKey(employee, name, value) {
-    const deletedFromEmployeeClone = {...employee};
-    delete deletedFromEmployeeClone.name;
-    delete deletedFromEmployeeClone.streetAddress;
-    return deletedFromEmployeeClone;
+ function deleteFromEmployeeByKey(employee, key) {
+    const deletedFromEmployeeByKey = {...employee};
+    delete deletedFromEmployeeByKey[key];
+    return deletedFromEmployeeByKey;
 }
 
 function destructivelyDeleteFromEmployeeByKey(employee, key) {
-        delete employee.name;
-        delete employee.streetAddress;
-        return employee;
+    delete employee[key];
+    return employee;
 }
 
